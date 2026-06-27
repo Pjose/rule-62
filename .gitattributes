@@ -1,0 +1,15 @@
+# Handle text files automatically and normalize them to LF on commit
+* text=auto
+
+# Explicitly force LF for bash scripts (CRLF breaks scripts on Unix/Docker)
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Explicitly force CRLF for Windows-specific batch scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Denote binary files so Git never modifies their line endings
+*.png binary
+*.jpg binary
+*.gif binary
